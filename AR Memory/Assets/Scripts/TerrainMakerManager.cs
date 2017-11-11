@@ -7,12 +7,15 @@ public class TerrainMakerManager : MonoBehaviour {
 	public float perlinNoise;
 	public float refinement;
 	public float multiplier;
-	public int cubes;
+	public int landWidth;
+	public int landLength;
+	public float speed;
+
 	// Use this for initialization
 	void Start () {
-		for (int i = 0; i < cubes; i++)
+		for (int i = 0; i < landLength; i++)
 		{
-			for (int j = 0; j < cubes; j++)
+			for (int j = 0; j < landWidth; j++)
 			{
 				perlinNoise = Mathf.PerlinNoise(i * refinement, j * refinement);
 				GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -29,14 +32,17 @@ public class TerrainMakerManager : MonoBehaviour {
 				else if(perlinNoise < 0.25f && perlinNoise >= 0f){
 					cubeMesh.material.color = Color.cyan;
 				}
-				cube.transform.position = new Vector3(transform.position.x + i, transform.position.y + (perlinNoise * multiplier), transform.position.z + j);
-
+				cube.AddComponent<CubeMotor>();
+				cube.transform.localScale = cube.transform.localScale * 4;
+				cube.transform.position = new Vector3(transform.position.x + (i*4), transform.position.y + (perlinNoise * multiplier), transform.position.z + (j*4));
+				cube.transform.SetParent(this.gameObject.transform);
 			}
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
+
 }

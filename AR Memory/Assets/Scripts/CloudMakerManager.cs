@@ -25,9 +25,10 @@ public class CloudMakerManager : MonoBehaviour {
 	}
 
 	public void SpawnRandomCloud(){
-		GameObject cloud = Instantiate(Resources.Load("cloud"), new Vector3(transform.position.x, Random.Range(-75,75), Random.Range(-50,50)), Quaternion.identity) as GameObject;
-		cloud.transform.localScale = new Vector3(Random.Range (3,50), Random.Range(3,20), Random.Range(3,50));
+		GameObject cloud = Instantiate(Resources.Load("cloud"), new Vector3(transform.position.x, Random.Range(20,75), Random.Range(-50,50)), Quaternion.identity) as GameObject;
+		cloud.transform.localScale = new Vector3(Random.Range (3,10), Random.Range(3,10), Random.Range(3,10));
 		cloud.transform.eulerAngles = new Vector3(0, Random.Range(0,90), 0);
 		cloud.GetComponent<CloudMotor>().speed = cloudSpeed;
 	}
+
 }
