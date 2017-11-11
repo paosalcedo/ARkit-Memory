@@ -29,6 +29,5 @@ public class CloudMakerManager : MonoBehaviour {
 		cloud.transform.localScale = new Vector3(Random.Range (3,50), Random.Range(3,20), Random.Range(3,50));
 		cloud.transform.eulerAngles = new Vector3(0, Random.Range(0,90), 0);
 		cloud.GetComponent<CloudMotor>().speed = cloudSpeed;
-		
 	}
 }
