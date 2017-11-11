@@ -9,7 +9,7 @@ public class FlightControl : MonoBehaviour {
 	public float xMultiplier;
 	public float zMultiplier;
 
-	float timeScale = 0.25f;
+	float timeScale = 0.251f;
 	// Use this for initialization
 	void Start () {
 		

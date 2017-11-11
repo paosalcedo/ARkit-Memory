@@ -129,23 +129,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7574124
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.65293694
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
       propertyPath: m_LocalScale.x
@@ -161,7 +161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 98.47301
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb27422c86b170642a84a5c7c6c23146, type: 3}
@@ -183,8 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perlinJitter: 0
   yMultiplier: 15
-  xMultiplier: 5
-  zMultiplier: 200
+  xMultiplier: 20
+  zMultiplier: 15
 --- !u!1 &1178099025
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +258,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1401967883}
+  - component: {fileID: 1401967884}
   m_Layer: 0
   m_Name: CloudMaker
   m_TagString: Untagged
@@ -271,13 +272,25 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1401967882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125.705956, y: -100.57794, z: 233.16277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 230.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1401967884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401967882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ea41f10f5d1d84eba78508fe1dcd9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudSpeed: 50
 --- !u!1 &1836912847
 GameObject:
   m_ObjectHideFlags: 0
