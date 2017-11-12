@@ -20,8 +20,8 @@ public class CubeMotor : MonoBehaviour {
 		transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
 	}
 	public void Teleport(){
-		if(transform.position.x <= -100f){
-			transform.position = new Vector3(300, startPos.y, startPos.z);
+		if(transform.position.x <= -25f){
+			transform.position = new Vector3(75f, startPos.y, startPos.z);
 		}
 	}
 }

@@ -33,8 +33,8 @@ public class TerrainMakerManager : MonoBehaviour {
 					cubeMesh.material.color = Color.cyan;
 				}
 				cube.AddComponent<CubeMotor>();
-				cube.transform.localScale = cube.transform.localScale * 4;
-				cube.transform.position = new Vector3(transform.position.x + (i*4), transform.position.y + (perlinNoise * multiplier), transform.position.z + (j*4));
+				cube.transform.localScale = cube.transform.localScale;
+				cube.transform.position = new Vector3(transform.position.x + i, transform.position.y + (perlinNoise * multiplier), transform.position.z + j);
 				cube.transform.SetParent(this.gameObject.transform);
 			}
 		}

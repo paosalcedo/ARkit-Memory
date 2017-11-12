@@ -8,11 +8,12 @@ public class FlightControl : MonoBehaviour {
 	public float yMultiplier;
 	public float xMultiplier;
 	public float zMultiplier;
+	Vector3 startPos;
 
 	float timeScale = 0.251f;
 	// Use this for initialization
 	void Start () {
-		
+		startPos = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -22,7 +23,7 @@ public class FlightControl : MonoBehaviour {
 	}
 
 	public void FlightJitter(){
-		transform.position = new Vector3 (perlinJitter * xMultiplier, perlinJitter * yMultiplier, perlinJitter * zMultiplier);
+		transform.position = new Vector3 (perlinJitter * xMultiplier, startPos.y + (perlinJitter * yMultiplier), perlinJitter * zMultiplier);
 	}
 
  
